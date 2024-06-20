@@ -1,0 +1,61 @@
+
+package Keywords;
+class loan{
+int rate;
+loan(){
+System.out.println("HI,I'm default constructor of loan");
+}
+loan(int rate){
+this.rate=rate;
+}
+void printRate(){
+System.out.println(this.rate);
+}
+}
+class carloan extends loan{
+int rate;
+carloan(){
+System.out.println("Hi,I'm default constructor of carloan");
+System.out.println(Super.rate);
+}
+carloan(int rate){
+Super(7);
+this.rate=rate;
+}
+void printRate(){
+System.out.println(this.rate);
+Super.printRate();
+System.out.println(Super.rate);
+}
+}
+public class SuperStudy{
+public static void main(String[] args){
+carloan cl2=new carloan();
+carloan cl=new carloan(8);
+cl.printRate();
+}
+}
+//final methos,final keywords,final class
+package keywords;
+class A{
+ffinal int noOfAlphabets=26;//final variables-value once assigned cannot be changed.
+final int noOfDigits;
+//either assign the value at time of declaration or assign the value inside constructor.
+A(){
+noOfDigits=10;
+}
+final void fun()
+{
+System.out.println("Hi,I'm a function in class A");
+}
+}
+class B extends A{
+//void fun(){
+System.out.println("I'm a function in B overriding function in A");
+}
+}
+final class B extends A{}//final classes cannot be inherited.
+class C extend B{} 
+public class FinalStudy{
+public static void main(String[] args){}
+}
