@@ -1,0 +1,86 @@
+
+package strings;
+public class StringStudy{
+public static void main(String[] args){
+String name="CipherSchools";//created using String literals stored in method area.
+String name2="CipherSchools";
+String name3=new String("CipherSchools");//creating string using constructors.
+String name4=new String("CipherSchools");
+System.out.println(name=name2);//==operator compares references for objects and values for primitive data types.
+System.out.println(name3==name4);
+System.out.println(name==name3);
+//String are immutable
+//everytimes we do an operation on a string,a new object is created.
+System.out.print("-----------------------------------------------");
+//4.creating partial string object from character array
+System.out.print("-----------------------------------------------");
+System.out.print("creating partial string object from character array");
+String partialStrFromArr=new String(arr,1,3);
+//we can pass an array,starting index(included),count of elements after starting index.
+System.out/println(partialStrFromArr);
+String partialStrFromArr2=new String(arr,23);
+//we can pass an array,starting index(included),count of elements after starting index.
+System.out/println(partialStrFromArr2);
+//5.changing the case
+System.out.print("-----------------------------------------------");
+System.out.print("changing the case");
+System.out.println(name.toLowerCase());
+System.out.println(name.toUpperCase());
+//name=name.toUpperCase();
+System.out.println(name);//remain same
+//5.splitting
+System.out.print("-----------------------------------------------");
+System.out.print("splitting");
+System.out.println("Please enter your fullname");
+Scanner sc=sc.nextLine();//cipherschools welcomes you
+String StrArr[]=fullName.split(" ");
+for(int i=0;i<StrArr.length;i++)
+{
+System.out.println(StrArr[i]);
+}
+System.out.println("Please enter something seperated by commas:");
+String csvText=sc.nextLine();//cipherschools welcomes you
+String csvArr=csvText.split(",");
+for(int i=0;i<csvArr.length;i++)
+{
+System.out.println(csvArr[i]);
+System.out.println("Please enter something seperated by dots:");
+String dotText=sc.nextLine();//cipherschools welcomes you
+String dotArr=csvText.split(",");
+for(int i=0;i<dotArr.length;i++)
+{
+System.out.println(dotArr[i]);
+}
+String backSlashText="Hello,I attend\"Java\"class";
+String backSlashArr[]=dotText.split("[.]");
+//these are special chars:\ ' 'etc we need to escape them using \ if we want them in our String.
+for(int i=0;i<backSlashArr.length;i++)
+{
+System.out.println(backSlashArr[i]);
+//6. length of string
+System.out.print("-----------------------------------------------");
+System.out.print("length of string");
+int len=name.length();
+System.out.println("Length of: "+name+" is: +len);
+//7.finding index of a char in a string 
+System.out.print("-----------------------------------------------");
+System.out.print("finding index of a char in a string");
+int index=name.indexoF('e')'//return first occurence of that character.
+System.out.println("Index of 'e' in"+name+"is:"+index);
+int index2=name.indexoF('E')'//return -1 if not found
+System.out.println("Index of 'E' in"+name+"is:"+index2);
+int index3=name.indexoF("schools")//return first occurence of that String.
+System.out.println("Index of "schools"in"+name+"is:"+index3);
+int index4=name.indexoF('o',10)//start searching from index 10,10 included
+System.out.println("Index of 'o' in"+name+"is:"+index);
+int indexoFo=0;
+while(indexoF o!=-1)//stop at -1 or Run till not -1
+//while(true)=>infinite loop
+{
+indexoF o=name.indexoF('o',indexoF o+1);
+if(indexoF o==-1)break;
+System.out.println("o found at: "+indexoF o);
+}
+}
+}
+}
